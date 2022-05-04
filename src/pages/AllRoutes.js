@@ -18,7 +18,8 @@ export default function AllRoutes() {
         <div className="all-routes-route-id" style={{ backgroundColor: r.color }}>{r.id}</div>
         <div className="all-routes-route-name-and-description">
           <div className="all-routes-route-name">{r.name}</div>
-          <div className="all-routes-route-description">{r.description}</div>
+          <div className="all-routes-route-description">{r.description}.</div>
+          
         </div>
       </div>
     );
@@ -30,7 +31,7 @@ export default function AllRoutes() {
       <Header />
       <div className="all-routes-container">
         <div>
-          <h1 className="all-routes-title">Rutas</h1>
+          <h1 className="all-routes-title"><span>Rutas</span></h1>
           {
             infoRoutes.map(showRoute)
           }

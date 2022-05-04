@@ -5,7 +5,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import "./RouteDetail.css";
-import { useEffect } from "react";
 
 export default function RouteDetail() {
   let { id } = useParams();
@@ -34,7 +33,7 @@ export default function RouteDetail() {
   const showStop = (stop, index) => {
     return (
       <div key={index} className="route-detail-stops" onClick={() => showVideo360(parseInt(id) + 1, index + 1)}>
-        <span>Parada {stop.idStop}:</span> {stop.name}
+        <span>Parada {stop.idStop}:</span> {stop.name}. <span className="route-detail-more">más...</span>
       </div>
     );
   }
