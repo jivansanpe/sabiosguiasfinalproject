@@ -31,10 +31,20 @@ export default function RouteDetail() {
   }
 
   const showStop = (stop, index) => {
+    const { video } = stop;
     return (
-      <div key={index} className="route-detail-stops" onClick={() => showVideo360(parseInt(id) + 1, index + 1)}>
-        <span>Parada {stop.idStop}:</span> {stop.name}. <span className="route-detail-more">más...</span>
-      </div>
+      <>
+        {
+          video !== "" ?
+            <div key={index} className="route-detail-stops route-detail-stops-with-data" onClick={() => showVideo360(parseInt(id) + 1, index + 1)}>
+              <span>Parada {stop.idStop}:</span> {stop.name}. <span className="route-detail-more">más...</span>
+            </div>
+            :
+            <div key={index} className="route-detail-stops">
+              <span>Parada {stop.idStop}:</span> {stop.name}.
+            </div>
+        }
+      </>
     );
   }
 

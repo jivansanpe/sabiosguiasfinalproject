@@ -1,8 +1,13 @@
 //JSON -- JavaScript Object Notation
 
 window.AFRAME.registerComponent('draw-canvas', {
+  schema: {
+    textToShow: { type: 'string' },
+    route: { type: 'int' },
+    stop: { type: 'int' },
+  },
   init: function () {
-    this.canvas = document.getElementById("my-canvas");
+    this.canvas = document.getElementById(`my-canvas-${this.data.stop}`);
     this.ctx = this.canvas.getContext('2d');
 
     // we'll update this manually
@@ -23,20 +28,21 @@ window.AFRAME.registerComponent('draw-canvas', {
 
     // drawRectangle(this.ctx);
 
-    this.ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
-    roundRect(this.ctx, 0, 0, 500, 100, 20, true);
+    this.ctx.fillStyle = "rgba(0, 0, 255, 0.3)";
+    roundRect(this.ctx, 0, 0, 1000, 100, 20, true);
 
-    text(this.ctx);
+    text(this.ctx, this.data.textToShow);
 
-    this.el.addEventListener('mouseenter', function(){
+    this.el.addEventListener('mouseenter', () => {
       console.log("hola");
+      window.location.href = `/video-360/${this.data.route}/${this.data.stop + 1}`;
     });
 
-    this.el.addEventListener('click', function(){
+    this.el.addEventListener('click', function () {
       console.log("adios");
     });
   },
-  tick: function() {
+  tick: function () {
     // if the texture is created - update it
     if (this.texture) this.texture.needsUpdate = true;
   }
@@ -44,7 +50,7 @@ window.AFRAME.registerComponent('draw-canvas', {
 
 function drawRectangle(ctx) {
   ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
-  ctx.fillRect(0, 0, 500, 100);
+  ctx.fillRect(0, 0, 100, 100);
 }
 
 function drawGradient(ctx) {
@@ -86,8 +92,8 @@ function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
   }
 }
 
-function text(ctx) {
-  ctx.font = "50px Arial";
+function text(ctx, textToShow) {
+  ctx.font = "70px Arial";
   ctx.fillStyle = "rgba(255, 255, 255, 1)";
-  ctx.fillText("Hello World", 50, 70);
+  ctx.fillText(textToShow, 50, 70);
 }

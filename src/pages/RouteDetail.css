@@ -44,7 +44,7 @@
   margin-top: 1em;
 }
 
-.route-detail-stops:hover {
+.route-detail-stops-with-data:hover {
   background-color: lightgray;
   cursor: pointer;
 }

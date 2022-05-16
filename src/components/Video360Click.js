@@ -3,7 +3,7 @@ const setVideoActive = () => {
   console.log(vid);
 
   setTimeout(() => {
-    this.style.display = 'none';
+    // this.style.display = 'none';
     vid.play();  
   }, 3000);
   
