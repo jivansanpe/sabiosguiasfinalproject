@@ -12,6 +12,8 @@ import RouteDetail from "./pages/RouteDetail";
 import Main from "./pages/Main";
 
 import "./App.css";
+import ShowRSS from "./components/ShowRSS";
+import ShowRSSFile from "./components/ShowRSSFile";
 
 function App() {
   // const location = useLocation();
@@ -38,9 +40,11 @@ function App() {
           {/* <Routes location={displayLocation}> */}
           <Routes>
             <Route path="/main" element={<Main />} />
+            <Route path="/rss-file" element={<ShowRSSFile />} />
             <Route path="/route-detail/:id" element={<RouteDetail />} />
             <Route path="/all-routes" element={<AllRoutes />} />
             <Route path="/video-360/:route/:stop" element={<Video360 />} />
+            <Route path="/rss" element={<ShowRSS />} />
             <Route path="/" element={<Main />} />
           </Routes>
         {/* </div> */}

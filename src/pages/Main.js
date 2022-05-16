@@ -14,28 +14,28 @@ export default function Main() {
       <div className="main-container">
         <Carousel dynamicHeight={true}>
           <div>
-            <img src="/img/img_4053_resultado_resultado.png" />
-            <p className="legend">Legend 1</p>
+            <img src="/img/img_4053_resultado_resultado.png" alt="image not loaded"/>
+            <p className="legend">Vista general</p>
           </div>
           <div>
-            <img src="/img/img_4068_resultado_resultado.png" />
-            <p className="legend">Legend 2</p>
+            <img src="/img/img_4068_resultado_resultado.png" alt="image not loaded"/>
+            <p className="legend">Acequia subterránea</p>
           </div>
           <div>
-            <img src="/img/p1130069_resultado_resultado.png" />
-            <p className="legend">Legend 3</p>
+            <img src="/img/p1130069_resultado_resultado.png" alt="image not loaded"/>
+            <p className="legend">Kilómetros de acequia</p>
           </div>
           <div>
-            <img src="/img/img_4053_resultado_resultado-1.png" />
-            <p className="legend">Legend 1</p>
+            <img src="/img/img_4053_resultado_resultado.png" alt="image not loaded"/>
+            <p className="legend">Vista general</p>
           </div>
           <div>
-            <img src="/img/img_4068_resultado_resultado-1.png" />
-            <p className="legend">Legend 2</p>
+            <img src="/img/img_4068_resultado_resultado.png" alt="image not loaded"/>
+            <p className="legend">Acequia subterránea</p>
           </div>
           <div>
-            <img src="/img/p1130069_resultado_resultado-1.png" />
-            <p className="legend">Legend 3</p>
+            <img src="/img/p1130069_resultado_resultado.png" alt="image not loaded"/>
+            <p className="legend">Kilómetros de acequia</p>
           </div>
         </Carousel>
         <div>
