@@ -45,7 +45,7 @@ function App() {
             <Route path="/all-routes" element={<AllRoutes />} />
             <Route path="/video-360/:route/:stop" element={<Video360 />} />
             <Route path="/rss" element={<ShowRSS />} />
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<AllRoutes />} />
           </Routes>
         {/* </div> */}
       </Router>
