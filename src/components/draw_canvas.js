@@ -1,10 +1,9 @@
-//JSON -- JavaScript Object Notation
-
 window.AFRAME.registerComponent('draw-canvas', {
   schema: {
     textToShow: { type: 'string' },
     route: { type: 'int' },
     stop: { type: 'int' },
+    available: { type: 'boolean' }
   },
   init: function () {
     this.canvas = document.getElementById(`my-canvas-${this.data.stop}`);
@@ -12,7 +11,7 @@ window.AFRAME.registerComponent('draw-canvas', {
 
     // we'll update this manually
     this.texture = null;
-    // let canvas = document.getElementById("source-canvas");
+
     // wait until the element is ready
     this.el.addEventListener('loaded', e => {
       // create the texture
@@ -24,22 +23,18 @@ window.AFRAME.registerComponent('draw-canvas', {
       // if there was a map before, you should dispose it
     });
 
-    // drawGradient(this.ctx);
-
-    // drawRectangle(this.ctx);
-
-    this.ctx.fillStyle = "rgba(0, 0, 255, 0.3)";
+    this.ctx.fillStyle = `rgba(255, 0, 0, ${this.data.available ? "0.75" : "0.25"})`;
     roundRect(this.ctx, 0, 0, 1000, 100, 20, true);
 
-    text(this.ctx, this.data.textToShow);
+    text(this.ctx, this.data.textToShow, `${this.data.available ? "white" : "gray"}`);
 
     this.el.addEventListener('mouseenter', () => {
-      console.log("hola");
-      window.location.href = `/video-360/${this.data.route}/${this.data.stop + 1}`;
+      const vid = document.getElementById("vid");
+      vid.setAttribute("src", `/video/Route-${this.data.route}/Route-${this.data.route}-Stop-${this.data.stop + 1}.mp4`);
     });
 
     this.el.addEventListener('click', function () {
-      console.log("adios");
+      // Not beeing used right now
     });
   },
   tick: function () {
@@ -54,7 +49,6 @@ function drawRectangle(ctx) {
 }
 
 function drawGradient(ctx) {
-  console.log("hola");
   // Create gradient
   var grd = ctx.createLinearGradient(0, 0, 100, 0);
   grd.addColorStop(0, "red");
@@ -92,8 +86,8 @@ function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
   }
 }
 
-function text(ctx, textToShow) {
+function text(ctx, textToShow, color) {
   ctx.font = "70px Arial";
-  ctx.fillStyle = "rgba(255, 255, 255, 1)";
+  ctx.fillStyle = color;
   ctx.fillText(textToShow, 50, 70);
 }

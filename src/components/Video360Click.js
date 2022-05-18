@@ -1,6 +1,6 @@
 const setVideoActive = () => {
   var vid = document.getElementById('vid');
-  console.log(vid);
+  // console.log(vid);
 
   setTimeout(() => {
     // this.style.display = 'none';
