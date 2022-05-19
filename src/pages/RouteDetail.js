@@ -5,11 +5,17 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import "./RouteDetail.css";
+import { useEffect } from "react";
 
 export default function RouteDetail() {
   let { id } = useParams();
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    //enable scroll after comming back from a-frame environment
+    document.querySelector("html").classList.remove("a-fullscreen");
+  });
 
   const showRoute = (r) => {
     return (
@@ -33,18 +39,18 @@ export default function RouteDetail() {
   const showStop = (stop, index) => {
     const { video } = stop;
     return (
-      <>
+      <div key={index} >
         {
           video !== "" ?
-            <div key={index} className="route-detail-stops route-detail-stops-with-data" onClick={() => showVideo360(parseInt(id) + 1, index + 1)}>
+            <div className="route-detail-stops route-detail-stops-with-data" onClick={() => showVideo360(parseInt(id) + 1, index + 1)}>
               <span>Parada {stop.idStop}:</span> {stop.name}. <span className="route-detail-more">más...</span>
             </div>
             :
-            <div key={index} className="route-detail-stops">
+            <div className="route-detail-stops">
               <span>Parada {stop.idStop}:</span> {stop.name}.
             </div>
         }
-      </>
+      </div>
     );
   }
 
