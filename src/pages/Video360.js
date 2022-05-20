@@ -20,9 +20,15 @@ function Video360() {
           <video id="vid" loop={true} src={`/video/Route-${route}/Route-${route}-Stop-${stop}.mp4`} autoPlay={true} > </video>
         </a-assets>
 
-        <a-camera>
+        {/* <a-camera>
           <a-cursor fuse="true" fuse-timeout="2000" raycaster="objects: .clickable" rayorigin="mouse"></a-cursor>
-        </a-camera>
+        </a-camera> */}
+
+        <a-entity camera="" position="0 1.6 0" look-controls="" >
+          <a-entity cursor="fuse:true;fuseTimeout:2000" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8" material="shader:flat;color:#008000" animation__mouseenter="from:1 1 1;dir:reverse;dur:2000;property:scale;startEvents:mouseenter;to:4 4 4"
+            raycaster="objects: .clickable">
+          </a-entity>
+        </a-entity>
 
         {
           infoRoutes[route - 1].stops.map((s, index) =>

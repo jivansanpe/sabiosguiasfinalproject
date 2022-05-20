@@ -11,8 +11,6 @@ import AllRoutes from "./pages/AllRoutes";
 import RouteDetail from "./pages/RouteDetail";
 import Main from "./pages/Main";
 
-import "./App.css";
-import ShowRSS from "./components/ShowRSS";
 import ShowRSSFile from "./components/ShowRSSFile";
 
 function App() {
@@ -44,7 +42,6 @@ function App() {
             <Route path="/route-detail/:id" element={<RouteDetail />} />
             <Route path="/all-routes" element={<AllRoutes />} />
             <Route path="/video-360/:route/:stop" element={<Video360 />} />
-            <Route path="/rss" element={<ShowRSS />} />
             <Route path="/" element={<AllRoutes />} />
           </Routes>
         {/* </div> */}

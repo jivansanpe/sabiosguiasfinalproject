@@ -29,12 +29,12 @@ window.AFRAME.registerComponent('draw-canvas', {
     text(this.ctx, this.data.textToShow, `${this.data.available ? "white" : "gray"}`);
 
     this.el.addEventListener('mouseenter', () => {
-      const vid = document.getElementById("vid");
-      vid.setAttribute("src", `/video/Route-${this.data.route}/Route-${this.data.route}-Stop-${this.data.stop + 1}.mp4`);
+      // Not beeing used right now
     });
 
-    this.el.addEventListener('click', function () {
-      // Not beeing used right now
+    this.el.addEventListener('click', () => {
+      const vid = document.getElementById("vid");
+      vid.setAttribute("src", `/video/Route-${this.data.route}/Route-${this.data.route}-Stop-${this.data.stop + 1}.mp4`);
     });
   },
   tick: function () {
