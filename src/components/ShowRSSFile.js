@@ -19,10 +19,10 @@ const xml = `<rss version="2.0">
 export default function ShowRSSFile() {
   useEffect(() => {
     /* later within the component */
-    // window.open(rss, '_self');
+    window.open(rss, '_self');
 
-    let blob = new Blob([xml], { type: 'text/xml' });
-    let url = URL.createObjectURL(blob);
-    window.open(url);
+    // let blob = new Blob([xml], { type: 'text/xml' });
+    // let url = URL.createObjectURL(blob);
+    // window.open(url);
   })
 }
