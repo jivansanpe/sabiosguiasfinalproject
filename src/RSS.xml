@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0">
+
+
+  <channel>
+    <title> Canal RSS de la Ruta de los Sabios Guías </title>
+    <description> Página de los Sabios Guías </description>
+    <link>https://www.sabiosguiasinterpretes.com/ </link>
+    <item>
+      <title> Ruta Agüimes </title>
+      <link>https://proyectovr-f7679.web.app/route-detail/0</link>
+      <description> Ruta por el casco histórico de Agüimes </description>
+    </item>
+    <item>
+      <title> Ruta Alemán </title>
+      <link>https://proyectovr-f7679.web.app/route-detail/1</link>
+      <description> Ruta por Las Palmas de GC </description>
+    </item>
+    <item>
+      <title> Ruta Tras las huellas británicas </title>
+      <link>https://proyectovr-f7679.web.app/route-detail/2</link>
+      <description> Es una ruta por Ciudad Jardín (Las Palmas de G.C.) donde se destacan visitan los principales elementos que recuerdan a día de hoy el pasado británico de la ciudad. </description>
+    </item>
+    <item>
+      <title> Ruta Inmersión Lingüística </title>
+      <link>https://proyectovr-f7679.web.app/route-detail/3</link>
+      <description> Ruta de inmersión lingüística Canaria, en la que a través de personajes relevantes de nuestra literatura, los turistas practican nuestro idioma </description>
+    </item>
+    <item>
+      <title> Ruta Jardín Canario </title>
+      <link>https://proyectovr-f7679.web.app/route-detail/4</link>
+      <description> Ruta por el Jardín Canario </description>
+    </item>
+    <item>
+      <title> Ruta Transhumania </title>
+      <link>https://proyectovr-f7679.web.app/route-detail/5</link>
+      <description>Ruta por el casco histórico de Agüimes</description>
+    </item>
+    <item>
+      <title> Ruta Barranco de Azuaje </title>
+      <link>https://proyectovr-f7679.web.app/route-detail/6</link>
+      <description> Ruta de Azuaje realizada por el alumnado de 1ºDAM-T del IES El Rincón </description>
+    </item>
+
+
+  </channel>
+
+</rss>

@@ -1,4 +1,5 @@
 import React from 'react';
+import rss from "../RSS.xml";
 import {
   Nav,
   NavLink,
@@ -9,6 +10,9 @@ import {
 } from './HeaderHomeElements';
 
 const Navbar = () => {
+  const handleClick2 = () => {
+    window.open(rss, '_self');
+  }
   return (
     <>
       <Nav>
@@ -23,6 +27,9 @@ const Navbar = () => {
           <NavLink to='/video-360/hub' activeStyle>
             VR
           </NavLink>
+          <span onClick={handleClick2} className="pointer">
+            RSS
+          </span>
           <NavLink to='/Home' activeStyle>
             Inicio
           </NavLink>

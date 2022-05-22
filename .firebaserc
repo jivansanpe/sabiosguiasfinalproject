@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "vrbicycles-16b71"
-  }
+    "default": "albertivan-6d7c9",
+    "ai": "albertivan-6d7c9"
+  },
+  "targets": {}
 }

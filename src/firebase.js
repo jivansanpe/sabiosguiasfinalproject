@@ -1,20 +1,17 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase } from "firebase/database";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBW7vhV7UaJsrJuPXdUmTCDGQx_BmtezRw",
-  authDomain: "bicycles-340516.firebaseapp.com",
-  databaseURL: "https://bicycles-340516-default-rtdb.firebaseio.com",
-  projectId: "bicycles-340516",
-  storageBucket: "bicycles-340516.appspot.com",
-  messagingSenderId: "293888771173",
-  appId: "1:293888771173:web:d27503df94ab81efb7f28c"
+  apiKey: "AIzaSyDmJ77IpmMTki924BI9394hjDWTtMEcZvI",
+  authDomain: "albertivan-6d7c9.firebaseapp.com",
+  projectId: "albertivan-6d7c9",
+  storageBucket: "albertivan-6d7c9.appspot.com",
+  messagingSenderId: "779852041591",
+  appId: "1:779852041591:web:ef21931c6c3b4933a4a572"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Get a reference to the database service
-const database = getDatabase(app);
-
-export default database;
