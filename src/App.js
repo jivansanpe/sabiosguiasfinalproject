@@ -10,6 +10,7 @@ import Hub from "./pages/Video360";
 import AllRoutes from "./pages/AllRoutes";
 import RouteDetail from "./pages/RouteDetail";
 import Main from "./pages/Main";
+import Home from "./pages/Home";
 
 
 import ShowRSSFile from "./components/ShowRSSFile";
@@ -45,7 +46,8 @@ function App() {
             <Route path="/all-routes" element={<AllRoutes />} />
             <Route path="/video-360/hub" element={<Hub />} />
             <Route path="/video-360/:route/:stop" element={<RoutesVR />} />
-            <Route path="/" element={<AllRoutes />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
           </Routes>
         {/* </div> */}
       </Router>
