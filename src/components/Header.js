@@ -42,6 +42,7 @@ export default function Header() {
         <ul className={`header-menu ${collapsedMenu ? "header-collapsed-menu" : "header-not-collapsed-menu"}`} >
           <li><a href="/">INICIO</a></li>
           <li><a href="/all-routes">RUTAS</a></li>
+          <li><a href="/video-360/hub">VR</a></li>
         </ul>
       </header>
     </>

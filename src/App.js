@@ -6,12 +6,14 @@ import {
   Routes,
   useLocation
 } from "react-router-dom";
-import Video360 from "./pages/Video360";
+import Hub from "./pages/Video360";
 import AllRoutes from "./pages/AllRoutes";
 import RouteDetail from "./pages/RouteDetail";
 import Main from "./pages/Main";
 
+
 import ShowRSSFile from "./components/ShowRSSFile";
+import RoutesVR from "./components/RoutesVR";
 
 function App() {
   // const location = useLocation();
@@ -41,7 +43,8 @@ function App() {
             <Route path="/rss-file" element={<ShowRSSFile />} />
             <Route path="/route-detail/:id" element={<RouteDetail />} />
             <Route path="/all-routes" element={<AllRoutes />} />
-            <Route path="/video-360/:route/:stop" element={<Video360 />} />
+            <Route path="/video-360/hub" element={<Hub />} />
+            <Route path="/video-360/:route/:stop" element={<RoutesVR />} />
             <Route path="/" element={<AllRoutes />} />
           </Routes>
         {/* </div> */}
