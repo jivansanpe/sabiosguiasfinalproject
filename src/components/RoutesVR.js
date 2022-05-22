@@ -53,6 +53,7 @@ function RoutesVR() {
             click: () => handleClickH(),
           }}
         />
+
         {
           infoRoutes[route - 1].stops.map((s, index) =>
             <MenuItem key={index} x=".8" y="1.6" pos={index - 1} route={route} stop={index} textToShow={s.name} available={s.video !== ""} />
